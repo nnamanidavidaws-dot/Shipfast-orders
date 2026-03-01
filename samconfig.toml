@@ -1,0 +1,16 @@
+# SAM deployment configuration
+# Run: sam deploy --guided  (first time)
+# Run: sam deploy           (subsequent times, uses this config)
+
+version = 0.1
+
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name          = "shipfast-orders"
+resolve_s3          = true
+s3_prefix           = "shipfast-orders"
+region              = "us-east-1"
+capabilities        = "CAPABILITY_IAM"
+confirm_changeset   = true
+fail_on_empty_changeset = false
